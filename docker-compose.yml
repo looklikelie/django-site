@@ -10,10 +10,10 @@ services:
         . .env/bin/activate
         pip install --upgrade pip
         pip install -r requirements.txt
-        python mysite/manage.py runserver 127.0.0.1:8000
+        python mysite/manage.py runserver 0.0.0.0:52356
     image: python:3.11.5-alpine
     ports:
-      - 8000:8000
+      - 52356:52356
     volumes:
       - ./:/app
     working_dir: /app
